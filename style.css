@@ -15,3 +15,7 @@ input {
 button {
     font: 20px arial;
 }
+
+body {
+    margin-left: 20px;
+}

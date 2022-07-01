@@ -2,17 +2,25 @@
 <html lang="en">
     <head>
         <title>Hello!</title>
-        <script>
-            var input = document.querySelector("input");
-            function btn1() {
-                document.querySelector("p").innerHTML = input;
-            }
-        </script>
     </head>
     <body>
-        <h1>Hello</h1>
-        <input type="text">
+        <h1>Mérleg</h1>
+        <p>Adja meg, milyen dagadt:</p>
+
+        <input type="number">
         <button onclick="btn1()">Kalkulálás</button>
-        <p></p>
+        <p id="output"></p>
+
+        <script>
+            function btn1() {
+                document.getElementById("output").innerHTML = "Kalkulálás...";
+                setTimeout(btn2, 1000);
+            }
+
+            function btn2() {
+                let input = document.querySelector("input").value;
+                document.getElementById("output").innerHTML = "Az ön testsúlya " + input + " kg.";
+            }
+        </script>
     </body>
 </html>

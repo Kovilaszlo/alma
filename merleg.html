@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hello!</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        
+        <ul>
+            <li>
+                <a href="merleg.html">
+                    <div class="active">Mérleg</div>
+                </a>
+            </li>
+            <li>
+                <a href="./magassag.html">
+                    <div>Testmagasság</div>
+                </a>
+            </li>
+            <li>
+                <a href="./vercukor.html">
+                    <div>Vércukorszint</div>
+                </a>
+            </li>
+            <li>
+                <a href="./vercsoport.html">
+                    <div>Vércsoport</div>
+                </a>
+            </li>
+        </ul>
+
+
+        <h1 class="center">Mérleg</h1>
+        <p class="center">Hány kilogramm vagy?</p>
+
+        <input class="center" type="number">
+        <button class="center" onclick="btn1()">Kalkulálás</button>
+        <p class="center" id="output"></p>
+
+        <script>
+            function btn1() {
+                document.getElementById("output").innerHTML = "Kalkulálás...";
+                setTimeout(btn2, 1000);
+            }
+
+            function btn2() {
+                let input = document.querySelector("input").value;
+                document.getElementById("output").innerHTML = "Az ön testsúlya " + input + " kg.";
+            }
+        </script>
+    </body>
+</html>

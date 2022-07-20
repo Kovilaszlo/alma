@@ -1,1 +1,77 @@
-Fejlesztés alatt.
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hello!</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        
+        <ul>
+            <li>
+                <a href="./index.html">
+                    <div>Mérleg</div>
+                </a>
+            </li>
+            <li>
+                <a href="./magassag.html">
+                    <div>Testmagasság</div>
+                </a>
+            </li>
+            <li>
+                <a href="./vercukor.html">
+                    <div class="active">Vércukorszint</div>
+                </a>
+            </li>
+            <li>
+                <a href="./vercsoport.html">
+                    <div>Vércsoport</div>
+                </a>
+            </li>
+        </ul>
+
+
+        <h1>Vércsoport megállapítása</h1>
+        <p>Válaszd ki a vércsoportodat!</p>
+
+
+        <button onclick="btn1()">A</button>
+        <button onclick="btn2()">B</button>
+        <button onclick="btn3()">AB</button>
+        <button onclick="btn4()">0</button>
+
+        <p id="output"></p>
+
+        <script>
+            let a;
+
+            function btn1() {
+                document.getElementById("output").innerHTML = "Kalkulálás...";
+                a = "A";
+                setTimeout(btnB, 1000);
+            }
+
+            function btn2() {
+                document.getElementById("output").innerHTML = "Kalkulálás...";
+                a = "B";
+                setTimeout(btnB, 1000);
+            }
+
+            function btn3() {
+                document.getElementById("output").innerHTML = "Kalkulálás...";
+                a = "AB";
+                setTimeout(btnB, 1000);
+            }
+
+            function btn4() {
+                document.getElementById("output").innerHTML = "Kalkulálás...";
+                a = "0";
+                setTimeout(btnB, 1000);
+            }
+
+            function btnB() {
+                document.getElementById("output").innerHTML = "Az ön vércsoportja " + a;
+            }
+        </script>
+    </body>
+</html>
